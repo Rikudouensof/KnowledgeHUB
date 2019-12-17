@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KnowledgeHUB.Views.BasePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                <StackLayout HorizontalOptions="Center">
+                    <ImageButton Source="Signin.png"
+                                 x:Name="ImagesigninButton" 
+                                 Clicked="ImagesigninButton_Clicked"/>
+
+                    <!--Button bellow will perform same action as ImagesigninButton-->
+                    <Button Text="Sign In"
+                            TextColor="DarkGray"
+                            FontAttributes="Bold" 
+                            BackgroundColor="Transparent"
+                            BorderColor="Brown" BorderRadius="8"
+                            Clicked="ImagesigninButton_Clicked"/> 
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <ImageButton Source="Signup.png"
+                                 x:Name="ImagesignupButton"
+                                 Clicked="ImagesignupButton_Clicked"/>
+
+                    <!--Button bellow will perform same action as ImagesigninButton-->
+                    <Button Text="Sign Up" TextColor="DarkGray" FontAttributes="Bold" BackgroundColor="Transparent" BorderColor="Brown" BorderRadius="8"  Clicked="ImagesignupButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+
+
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KnowledgeHUB.Views.SigninPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame WidthRequest="300"
+                   BackgroundColor="DarkKhaki"
+                   >
+                <StackLayout Margin="0"
+                         Padding="0"
+                         HorizontalOptions="Center"
+                         >
+                    <Label Margin="0"
+                                Text="Username"
+                                TextColor="White"
+                                FontSize="Micro"
+                                FontAttributes="Bold"/>
+                    <Entry x:Name="UsernameEntry"
+                                WidthRequest="280"/>
+                    <Label TextColor="Red" 
+                                    Text="Invalid Username"
+                                IsVisible="False"
+                                    x:Name="error1"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                   BackgroundColor="DarkKhaki"
+                   >
+                <StackLayout Margin="0"
+                         Padding="0"
+                         HorizontalOptions="Center"
+                         >
+                    <Label Margin="0"
+                                Text="Password"
+                                TextColor="White"
+                                FontSize="Micro"
+                                FontAttributes="Bold"/>
+                    <Entry x:Name="PasswordEntry"
+                                WidthRequest="280"
+                           IsPassword="True"/>
+                    <Label TextColor="Red" 
+                                    Text="Hint:"
+                                IsVisible="False"
+                                    x:Name="error2"/>
+                </StackLayout>
+            </Frame>
+
+            <Button BackgroundColor="Transparent" 
+                        BorderColor="DarkKhaki" 
+                        BorderRadius="8" 
+                        Text="Sign in"
+                        WidthRequest="300"
+                    Clicked="Button_Clicked"
+                        />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
